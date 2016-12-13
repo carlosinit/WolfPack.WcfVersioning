@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{0ABFC3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfVersioning.Client4", "WcfVersioning.Client4\WcfVersioning.Client4.csproj", "{B18A52C0-BFCB-4EA2-B242-45A66FED3DE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfVersioning.Client5", "WcfVersioning.Client5\WcfVersioning.Client5.csproj", "{50B784CE-63BF-4F05-B78A-EAB5FBE8CB1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{B18A52C0-BFCB-4EA2-B242-45A66FED3DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B18A52C0-BFCB-4EA2-B242-45A66FED3DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B18A52C0-BFCB-4EA2-B242-45A66FED3DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50B784CE-63BF-4F05-B78A-EAB5FBE8CB1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B784CE-63BF-4F05-B78A-EAB5FBE8CB1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B784CE-63BF-4F05-B78A-EAB5FBE8CB1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B784CE-63BF-4F05-B78A-EAB5FBE8CB1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +66,6 @@ Global
 		{271FED50-DB9D-463A-B024-8EF1465DAB2F} = {7CB9A916-40D7-4D79-B93D-7E0A1A639C9D}
 		{178513CB-6899-46E2-8501-44B3C7C0798E} = {7CB9A916-40D7-4D79-B93D-7E0A1A639C9D}
 		{B18A52C0-BFCB-4EA2-B242-45A66FED3DE2} = {7CB9A916-40D7-4D79-B93D-7E0A1A639C9D}
+		{50B784CE-63BF-4F05-B78A-EAB5FBE8CB1A} = {7CB9A916-40D7-4D79-B93D-7E0A1A639C9D}
 	EndGlobalSection
 EndGlobal

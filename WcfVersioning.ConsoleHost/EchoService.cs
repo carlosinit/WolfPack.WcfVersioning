@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Runtime.Remoting.Channels;
 using WcfVersioning.Contracts.V1;
+using WcfVersioning.Contracts.V1.Animals;
 
 namespace WcfVersioning.ConsoleHost
 {
@@ -23,6 +25,21 @@ namespace WcfVersioning.ConsoleHost
                 $"Echo: {message.Text} @ {creationDate}",
                 author,
                 MessageType.Echo);
+        }
+
+        public Animal GetRandomAnimal(int value)
+        {
+            switch (value)
+            {
+                case 1: return new Snake("Fnake", 150);
+                case 2: return new Fish("Nemo", 1.5m);
+                default: return new Dog("Fluke", 4);
+            }
+        }
+
+        public int GetNumber()
+        {
+            return 5;
         }
     }
 }

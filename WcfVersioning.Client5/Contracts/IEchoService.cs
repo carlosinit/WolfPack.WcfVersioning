@@ -1,7 +1,7 @@
 ﻿using System.ServiceModel;
-using WcfVersioning.Contracts.V1.Animals;
+using WcfVersioning.Client5.Contracts.Animals;
 
-namespace WcfVersioning.Contracts.V1
+namespace WcfVersioning.Client5.Contracts
 {
     [ServiceContract(Namespace = "http://ingenico/echo/V1")]
     public interface IEchoService
@@ -10,6 +10,6 @@ namespace WcfVersioning.Contracts.V1
         Message Echo(Message message);
 
         [OperationContract]
-        Animal GetRandomAnimal(int value);        
+        Animal GetRandomAnimal(int value);
     }
 }

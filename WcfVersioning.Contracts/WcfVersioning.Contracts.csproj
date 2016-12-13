@@ -45,6 +45,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="V1\Animals\Animal.cs" />
+    <Compile Include="V1\Animals\Dog.cs" />
+    <Compile Include="V1\Animals\Fish.cs" />
+    <Compile Include="V1\Animals\Snake.cs" />
     <Compile Include="V1\BeerVolume.cs" />
     <Compile Include="V1\Author.cs" />
     <Compile Include="V1\FavoriteBeer.cs" />
