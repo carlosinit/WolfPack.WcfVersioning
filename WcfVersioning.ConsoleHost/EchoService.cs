@@ -17,10 +17,12 @@ namespace WcfVersioning.ConsoleHost
             Console.WriteLine($"Received {message.Text} @ {creationDate} by {author.FullName}");
             Console.WriteLine($"who is born on the {author.BirthDate}");
             Console.WriteLine($"and likes {author.FavoriteBeer}");
+            Console.WriteLine($"This is a {message.Type} message");
 
             return new Message(
                 $"Echo: {message.Text} @ {creationDate}",
-                author);
+                author,
+                MessageType.Echo);
         }
     }
 }

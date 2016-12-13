@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace WcfVersioning.Contracts.V1
+namespace WcfVersioning.Client4.Contracts
 {
     [DataContract(Namespace = "http://ingenico/message")]
     public class Message
