@@ -15,7 +15,10 @@ namespace WcfVersioning.Client4
 
                 try
                 {
-                    factory.CreateChannel().Echo(new Message("Hello world", author, MessageType.Question));
+                    var service = factory.CreateChannel();
+                    Console.WriteLine(service.EchoWithType(new Message("Hello world", author, MessageType.Question), MessageType.Question).Type);
+                    Console.WriteLine(service.EchoWithType(new Message("Hello world", author, MessageType.Information), MessageType.Information).Type);
+                    factory.CreateChannel().EchoWithType(new Message("Hello world", author, MessageType.Question), null);
                 }
                 catch (FaultException exception)
                 {

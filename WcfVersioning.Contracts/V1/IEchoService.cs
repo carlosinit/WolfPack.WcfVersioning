@@ -10,6 +10,9 @@ namespace WcfVersioning.Contracts.V1
         Message Echo(Message message);
 
         [OperationContract]
+        Message EchoWithType(Message message, MessageType? type);
+
+        [OperationContract]
         Animal GetRandomAnimal(int value);        
     }
 }

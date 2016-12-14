@@ -9,22 +9,7 @@ namespace WcfVersioning.ConsoleHost
     {
         Message IEchoService.Echo(Message message)
         {
-            var creationDate = message.CreationDate;
-            if (creationDate == default(DateTime))
-            {
-                creationDate = DateTime.UtcNow;
-            }
-            var author = message.Author ?? Author.UnknownAuthor;
-
-            Console.WriteLine($"Received {message.Text} @ {creationDate} by {author.FullName}");
-            Console.WriteLine($"who is born on the {author.BirthDate}");
-            Console.WriteLine($"and likes {author.FavoriteBeer}");
-            Console.WriteLine($"This is a {message.Type} message");
-
-            return new Message(
-                $"Echo: {message.Text} @ {creationDate}",
-                author,
-                MessageType.Echo);
+            return EchoWithType(message, message.Type);
         }
 
         public Animal GetRandomAnimal(int value)
@@ -40,6 +25,27 @@ namespace WcfVersioning.ConsoleHost
         public int GetNumber()
         {
             return 5;
+        }
+
+        public Message EchoWithType(Message message, MessageType? type)
+        {
+            var creationDate = message.CreationDate;
+            if (creationDate == default(DateTime))
+            {
+                creationDate = DateTime.UtcNow;
+            }
+            var author = message.Author ?? Author.UnknownAuthor;
+            type = type ?? MessageType.Echo;
+
+            Console.WriteLine($"Received {message.Text} @ {creationDate} by {author.FullName}");
+            Console.WriteLine($"who is born on the {author.BirthDate}");
+            Console.WriteLine($"and likes {author.FavoriteBeer}");
+            Console.WriteLine($"This is a {message.Type} message");
+
+            return new Message(
+                $"Echo: {message.Text} @ {creationDate}",
+                author,
+                type.Value);
         }
     }
 }

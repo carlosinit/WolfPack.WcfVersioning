@@ -7,5 +7,7 @@ namespace WcfVersioning.Client4.Contracts
     {
         [OperationContract]
         Message Echo(Message message);
+        [OperationContract]
+        Message EchoWithType(Message message, MessageType? type);
     }
 }
